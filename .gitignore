@@ -12,6 +12,7 @@
 /build
 build.zip
 package-lock.json
+yarn.lock
 
 # misc
 .DS_Store
