@@ -1,9 +1,14 @@
 import React from 'react'
 import { BsSearch } from "react-icons/bs";
+import { useHistory } from 'react-router';
 import { Button, CardGroup, Col, Container, Input, InputGroup, Row } from 'reactstrap';
+import Footer from '../../Componants/Footer';
 
 
 const LandingPage = () => {
+
+    const history = useHistory();
+
     return (
         <>
             <Container fluid={true}>
@@ -35,7 +40,7 @@ const LandingPage = () => {
                             <Container fluid={true} className=" pb_3r  border_botto_for_cont_fluid p_l_r marg_top_for_F_IMG">
                                 <Row>
                                     <Col lg="6">
-                                        <div className="row">
+                                        <div className="row" onClick={() => history.push('/detail')}>
                                             <div className="col-sm-6  ">
                                                 <img alt="personimage" src="images/img1.jpg" className="img-fluid img1 " />
                                             </div>
@@ -58,9 +63,9 @@ const LandingPage = () => {
                                 </Row>
                             </Container>
 
-                            <Container fluid={true} className=" pb_3r border_botto_for_cont_fluid p_l_r mt-5">
+                            <Container fluid={true} className="pb_3r border_botto_for_cont_fluid p_l_r mt-5">
                                 <Row>
-                                    <Col lg="6">
+                                    <Col lg="6" onClick={() => history.push('/detail')}>
                                         <Row>
                                             <Col sm="6">
                                                 <img alt="personimage" src="images/img3.jpg" className="img-fluid img1 " />
@@ -86,7 +91,7 @@ const LandingPage = () => {
 
                             <Container fluid={true} className=" pb_3r border_botto_for_cont_fluid p_l_r mt-5">
                                 <Row>
-                                    <Col lg="6">
+                                    <Col lg="6" onClick={() => history.push('/detail')}>
                                         <Row>
                                             <Col sm="6">
                                                 <img alt="personimage" src="images/img5.jpg" className="img-fluid img5 " />
@@ -109,9 +114,12 @@ const LandingPage = () => {
                                     </Col>
                                 </Row>
                             </Container>
+                            {/* --Footer-- */}
+                            <Footer />
                         </div>
                     </CardGroup>
                 </Row>
+
             </Container>
         </>
 

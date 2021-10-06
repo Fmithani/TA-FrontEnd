@@ -1,0 +1,235 @@
+.text_col_blue {
+  color: #43efd8;
+}
+
+.text {
+  position: absolute;
+}
+.colr_white {
+  color: white;
+}
+
+.text_change {
+  position: absolute;
+  top: 14px;
+  left: 20%;
+
+  height: 70px;
+  padding: 0.2em 1em;
+  /* width:140px !important;force that at least some of vertical stripe is still shown */
+}
+
+.text_change:before {
+  /*left bracket*/
+  content: " ";
+  border: solid 2px #43efd8;
+  border-right: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+.text_change:after {
+  /*right bracket*/
+  content: " ";
+  border: solid 2px #43efd8;
+  border-left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text {
+  padding: 0.2em 1em;
+}
+
+.text:before {
+  /*left bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-right: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text:after {
+  /*right bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text2 {
+  position: absolute;
+  top: 158px;
+  left: 42%;
+  height: 82px;
+  padding: 0.2em 1em;
+  width: 75px;
+}
+
+.text2:before {
+  /*left bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-right: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text2:after {
+  /*right bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text3 {
+  position: absolute;
+  top: 128px;
+  left: 35%;
+  height: 150px;
+  padding: 0.2em 1em;
+  width: 150px;
+}
+
+.text3:before {
+  /*left bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-right: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text3:after {
+  /*right bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text4 {
+  position: absolute;
+  top: 110px;
+  left: 34%;
+  height: 190px;
+  padding: 0.2em 1em;
+  width: 160px;
+}
+
+.text4:before {
+  /*left bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-right: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text4:after {
+  /*right bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text5 {
+  position: absolute;
+  top: 128px;
+  left: 25%;
+  height: 350px;
+  padding: 0.2em 1em;
+  width: 290px;
+}
+
+.text5:before {
+  /*left bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-right: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+.text5:after {
+  /*right bracket*/
+  content: " ";
+  border: solid 2px white;
+  border-left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4em;
+  right: 0;
+}
+
+@media (min-width: 1440px) {
+  .relative_pos_for_bracket {
+    position: relative;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .text5 {
+    position: absolute;
+    top: 19px;
+    left: 25%;
+    height: 350px;
+    padding: 0.2em 1em;
+    width: 224px;
+  }
+}

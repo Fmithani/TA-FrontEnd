@@ -1,0 +1,259 @@
+.bg_fpage {
+  background: #0d1215;
+  padding: 60px 0px 28px 0px;
+  min-height: 100vh;
+}
+
+.info_cont {
+  justify-content: end;
+  padding: 0 120px 0px 80px !important;
+  background: transparent;
+  margin-bottom: 100px !important;
+}
+
+.p_l_r {
+  padding: 0 80px !important;
+}
+
+.BsSeacrh {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  /* color:orange; */
+  color: white;
+  z-index: 9;
+}
+
+.form-group {
+  position: relative;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+.input_search_bar {
+  background-color: #0d1215 !important;
+  border-top: 0px !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border: 0px !important;
+  border-radius: 0px !important;
+  color: white !important;
+  border-bottom: 2px solid !important;
+  padding-left: 100px;
+
+  border-style: dotted !important;
+}
+.input_search_bar:focus {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none !important;
+}
+.martop_for_ser_bar {
+  margin-top: 80px;
+}
+.form_cont {
+  width: 60%;
+  margin: 10px auto 0px auto;
+  background: transparent;
+}
+.btn-outline-light {
+  border-radius: 0px !important;
+  padding: 5px 20px !important;
+  font-size: 14px !important;
+  letter-spacing: 1.2px;
+}
+.border_blue {
+  border: 2px solid red;
+}
+.sort_txt {
+  font-size: 13px;
+  word-spacing: 5px;
+}
+
+.sort_txt span {
+  opacity: 0.4;
+}
+
+.border_botto_for_cont_fluid {
+  border-bottom: 1px solid #303030;
+}
+
+.img5 {
+  margin-top: 50px;
+}
+
+.form_file_upload {
+  display: flex;
+}
+
+.pb_3r {
+  padding-bottom: 3rem !important;
+}
+
+.info_cont p {
+  cursor: pointer;
+  text-align: right;
+}
+
+.card {
+  display: block !important;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 0px !important;
+}
+
+.marg_top_for_F_IMG {
+  margin-top: 100px;
+}
+
+.woman_txt {
+  font-size: 14px;
+}
+
+.rel_div_for_pos {
+  position: relative;
+  width: auto;
+}
+
+.absol_bor_1 {
+  position: absolute;
+  width: 80%;
+  border: 2px solid red;
+  height: 50%;
+  top: 12%;
+  left: 10%;
+}
+
+.absol_bor_2 {
+  position: absolute;
+  width: 40%;
+  border: 2px solid red;
+  height: 30%;
+  top: 63%;
+  left: 30%;
+}
+
+.arrow_css {
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
+.relative {
+  position: relative;
+}
+
+.blue_icon_for {
+  /* color:#43EFD8; */
+  font-weight: 900 !important;
+  margin-right: 10px;
+}
+
+.bor_bott_for_dot_text_img_det {
+  border-bottom: 1px solid white;
+  border-style: dotted;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding-bottom: 15px;
+}
+
+.fs_13 {
+  font-size: 13px;
+}
+
+.footer_txt {
+  font-size: 13px;
+  opacity: 0.7;
+  cursor: pointer !important;
+}
+.footer_cont {
+  display: block;
+  width: 300px;
+}
+
+// nedia query
+@media (max-width: 768px) {
+  .info_cont {
+    padding: 0 10px !important;
+    margin-bottom: -50px !important;
+  }
+  .form_cont {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .p_l_r {
+    padding: 0 10px !important;
+  }
+  .img5 {
+    margin-top: 0px;
+  }
+  .form_file_upload {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .BsSeacrh {
+    position: absolute;
+    top: 49%;
+    left: 0px;
+    transform: translateY(-50%);
+    /* color: orange; */
+    color: white;
+  }
+  .form-control {
+    padding-left: 44px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .img1 {
+    margin-top: 200px;
+  }
+
+  .img_of_text_1 {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+  }
+  .txt_cont_on_img_click {
+    width: 400px;
+    position: absolute;
+    top: 0;
+    padding-left: 5px;
+    padding-top: 20px !important;
+    /* min-height: 800px; */
+
+    z-index: 9;
+  }
+  .txt_cont_on_img_click_2 {
+    width: 400px;
+    position: absolute;
+    top: 0;
+    padding-left: 10px;
+    padding-top: 20px !important;
+    height: 800px;
+
+    z-index: 9;
+  }
+  .relative_pos_for_bracket {
+    position: relative;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+  }
+  .p_r_for_bord_img_s {
+    padding-right: 200px;
+  }
+}
+
+@media (min-width: 1432px) and (max-width: 1700px) {
+  .footer_cont {
+    margin-top: 150px !important;
+  }
+}
