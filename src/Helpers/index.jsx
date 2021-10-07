@@ -23,10 +23,12 @@ export const Json = string => JSON.parse(string);
 // get distribute uri path
 export const DistributeURIPath = (url) => {
     let uri = null;
-    if (url.includes(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.${process.env.REACT_APP_BUCKET_REGION}.amazonaws.com`)) {
-        uri = url.replace(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.${process.env.REACT_APP_BUCKET_REGION}.amazonaws.com`, process.env.REACT_APP_CLOUDFRONT_ADDRESS_ODIN);
-    } else if (url.includes(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.amazonaws.com`)) {
-        uri = url.replace(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.amazonaws.com`, process.env.REACT_APP_CLOUDFRONT_ADDRESS_ODIN);
+    if (url) {
+        if (url.includes(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.${process.env.REACT_APP_BUCKET_REGION}.amazonaws.com`)) {
+            uri = url.replace(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.${process.env.REACT_APP_BUCKET_REGION}.amazonaws.com`, process.env.REACT_APP_CLOUDFRONT_ADDRESS_ODIN);
+        } else if (url.includes(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.amazonaws.com`)) {
+            uri = url.replace(`https://${process.env.REACT_APP_BUCKET_NAME}.s3.amazonaws.com`, process.env.REACT_APP_CLOUDFRONT_ADDRESS_ODIN);
+        }
     }
     return uri;
 }

@@ -1,17 +1,10 @@
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import createSagaMiddleware from 'redux-saga';
+import RootReducers from './Store/RootReducers'
+import RootSaga from './Store/RootSaga';
+const saga = createSagaMiddleware();
 
-const initialState = {
-  sidebarShow: 'responsive'
-}
-
-const changeState = (state = initialState, { type, ...rest }) => {
-  switch (type) {
-    case 'set':
-      return {...state, ...rest }
-    default:
-      return state
-  }
-}
-
-const store = createStore(changeState)
+const store = createStore(RootReducers, composeWithDevTools(applyMiddleware(saga)));
+saga.run(RootSaga);
 export default store

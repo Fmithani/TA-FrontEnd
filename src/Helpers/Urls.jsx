@@ -1,7 +1,7 @@
 // Base
 export const Base = `${process.env.NODE_ENV === 'development'
-    ? process.env.REACT_APP_DEVELOPMENT_HOST
-    : process.env.REACT_APP_PRODUCTION_HOST}/`;
+    ? process.env.REACT_APP_API_DEVELOPMENT_HOST
+    : process.env.REACT_APP_API_PRODUCTION_HOST}/`;
 
 
 const CURLPath = {
