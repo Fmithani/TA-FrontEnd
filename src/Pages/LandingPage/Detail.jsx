@@ -7,8 +7,12 @@ import Footer from '../../Componants/Footer';
 
 const Detail = () => {
 
+    const [data, setData] = useState(JSON.parse(sessionStorage.getItem('images')) || []);
+    
     const useDigitalUnit = 'em';
     const [borderColor, setBorderColor] = useState('');
+
+    console.log(data);
 
     // Dummy json response
     const box = [{
