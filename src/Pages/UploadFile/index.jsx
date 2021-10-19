@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Button, Col, Container, Input, Row } from 'reactstrap';
 import { DistributeURIPath } from '../../Helpers/';
 import { FetchImage, UploadeImage, LoadingImage } from '../../Store/UploadImage/ActionMethods/ActionCreater';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
 
 
 const UploadFile = () => {
@@ -16,6 +18,7 @@ const UploadFile = () => {
     useEffect(() => {
         dispatch(FetchImage([]));
     }, [dispatch])
+    
 
 
     const ValidateForm = async e => {
@@ -49,14 +52,15 @@ const UploadFile = () => {
 
                         <Container fluid={true} className="text-white">
                             <Row>
-                                {ImagesState && ImagesState.images && ImagesState.images.length > 0 ?
+                                Total images uploaded : {ImagesState.images && ImagesState.images.length}
+                                {/* {ImagesState && ImagesState.images && ImagesState.images.length > 0 ?
 
                                     ImagesState.images.map(x =>
                                         <Col lg="3" key={x._id}>
                                             <h2 className="text-white mt-5">{x.file_name && x.file_name}</h2>
                                             <img width="99%" alt="#objectImage" src={DistributeURIPath(x.url)} className="img-fluid mt-4" />
                                         </Col>) : ''
-                                }
+                                } */}
                             </Row>
                         </Container>
                     </div>

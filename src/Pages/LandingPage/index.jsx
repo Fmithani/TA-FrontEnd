@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsSearch } from "react-icons/bs";
 import { useHistory } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import { Button, CardGroup, Col, Container, Input, InputGroup, Row } from 'reactstrap';
 import Footer from '../../Componants/Footer';
 
@@ -16,7 +17,10 @@ const LandingPage = () => {
                     <CardGroup className="p-0">
                         <div className="bg_fpage ">
                             <div className="info_cont">
-                                <p className=" text-white text-right">INFO</p>
+                                <div className="d-flex justify-content-end">
+                                    <NavLink className=" text-white text-right me-4 no_decoration" to="/archive" >ARCHIVE</NavLink>
+                                    <p className=" text-white text-right">INFO</p>
+                                </div>
                             </div>
 
                             <div className="form_cont">
