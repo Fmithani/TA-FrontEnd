@@ -1,4 +1,4 @@
-import { ADD_IMG, FETCH_IMG, FETCH_IMG_MIDDLEWARE, UPLOAD_IMG, LOADING_ACTION  } from "./Action";
+import { ADD_IMG, FETCH_IMG, FETCH_IMG_MIDDLEWARE, UPLOAD_IMG, LOADING_ACTION, SEARCH_IMG  } from "./Action";
 
 //-------------- for Image fatching
 
@@ -25,6 +25,15 @@ export const FetchImageMiddlware = images => {
         payload : images,
     }
 }
+
+export const SearchImage = keyword => {
+    return {
+        type : SEARCH_IMG,
+        payload : keyword,
+    }
+}
+
+
 
 //-------------- for Image Uploading
 

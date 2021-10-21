@@ -1,7 +1,8 @@
-import CURLPath, { Base } from './Urls'
+import CURLPath, { BASE_UPLOAD, BASE_RECOGNIZE, BASE_SEARCH } from './Urls'
 
 // Base Url set Here
-const Base_url = `${Base}api/`
+const Base = base_need => base_need === 3002 ? BASE_SEARCH : base_need === 3001 ? BASE_RECOGNIZE : BASE_UPLOAD;
+const Base_url = props => `${Base(props[2])}api/${props[0]}`;
 
 // Set headers for All APIs
 export const headers = CURLPath.json;
@@ -33,10 +34,5 @@ export const DistributeURIPath = (url) => {
     return uri;
 }
 
-// Check the URL is register or not
-const CURL = async (c) => await (CURLPath[c] === c) ?
-    `${Base_url}${CURLPath[c]}` :
-    false;
 
-
-export default CURL
+export default Base_url

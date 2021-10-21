@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { headers, headers2 } from '.';
-import CURL from '.'
+import Base_url from '.';
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
@@ -14,10 +14,10 @@ export const GetAuthentication = (formType = false) => {
 
 // Check User in our record
 export const POST = async (...props) => {
-    const url = await CURL(props[0]);
+    const url = await Base_url(props);
     if (url !== false) {
         try {
-            const { data } = await axios.post(url, props[1], { headers: GetAuthentication() });
+            const { data } = await axios.post(props[0], props[1], { headers: GetAuthentication() });
             return data;
         } catch (error) {
             return { success: false, message: '500 (Internal Server Error)!' };
@@ -28,8 +28,8 @@ export const POST = async (...props) => {
 }
 
 export const GET = async (...props) => {
-    const url = await CURL(props[0]);
-    // console.log(GetAuthentication() )
+    const url = await Base_url(props);
+    // console.log(url)
     if (url !== false) {
         try {
             const { data } = await axios.get(url, { headers: GetAuthentication() });
@@ -45,12 +45,13 @@ export const GET = async (...props) => {
 // For Uploading image
 const UPLOAD = async (...props) => {
     let formdata = new FormData();
-    formdata.append(`file`, props[1][0]);
-    const url = await CURL(props[0]);
+    formdata.append(`files`, props[1]);
+    const url = await Base_url(props);
+    console.log(url);
     if (url !== false) {
         try {
             const { data } = await axios.post(url, formdata, { headers: GetAuthentication(true) });
-            console.log(data);
+            // console.log(data);
             if(data.status === true){toastr.success('file uploaded successfully!');}
             return data;
         } catch (error) {

@@ -1,8 +1,15 @@
 // Base
-export const Base = `${process.env.NODE_ENV === 'development'
-    ? process.env.REACT_APP_API_DEVELOPMENT_HOST
-    : process.env.REACT_APP_API_PRODUCTION_HOST}/`;
+export const BASE_UPLOAD = `${process.env.NODE_ENV === 'development'
+    ? process.env.REACT_APP_API_DEVELOPMENT_UPLOADING_HOST
+    : process.env.REACT_APP_API_PRODUCTION__UPLOADING_HOST}/`;
 
+export const BASE_RECOGNIZE = `${process.env.NODE_ENV === 'development'
+    ? process.env.REACT_APP_API_DEVELOPMENT_RECOGNIZE_HOST
+    : process.env.REACT_APP_API_PRODUCTION__RECOGNIZE_HOST}/`;
+
+export const BASE_SEARCH = `${process.env.NODE_ENV === 'development'
+    ? process.env.REACT_APP_API_DEVELOPMENT_SEARCH_HOST
+    : process.env.REACT_APP_API_PRODUCTION__SEARCH_HOST}/`;
 
 const CURLPath = {
     json: {
@@ -11,8 +18,6 @@ const CURLPath = {
     form: {
         "Content-Type": "multipart/form-data",
     },
-    images: 'images',
-    'image-upload': 'image-upload',
 }
 
 export default CURLPath

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux"
-import FetchImagesReducer from "./UploadImage/FetchImagesReducer";
+import FetchImagesReducer from "./Image/FetchImagesReducer";
 
 const RootReducers = combineReducers({
     images : FetchImagesReducer,

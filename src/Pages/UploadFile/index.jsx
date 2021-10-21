@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { Button, Col, Container, Input, Row } from 'reactstrap';
+import { Button, Container, Input, Row } from 'reactstrap';
 // import { DistributeURIPath } from '../../Helpers/';
-import { FetchImage, UploadeImage, LoadingImage } from '../../Store/UploadImage/ActionMethods/ActionCreater';
-import toastr from 'toastr';
-import 'toastr/build/toastr.min.css';
+import { FetchImage, UploadeImage, LoadingImage } from '../../Store/Image/ActionMethods/ActionCreater';
 
 
 const UploadFile = () => {
