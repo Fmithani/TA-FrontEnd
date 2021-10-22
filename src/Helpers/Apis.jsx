@@ -45,7 +45,7 @@ export const GET = async (...props) => {
 // For Uploading image
 const UPLOAD = async (...props) => {
     let formdata = new FormData();
-    formdata.append(`files`, props[1]);
+    formdata.append(`files`, props[1][0]);
     const url = await Base_url(props);
     console.log(url);
     if (url !== false) {

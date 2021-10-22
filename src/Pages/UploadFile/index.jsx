@@ -40,7 +40,7 @@ const UploadFile = () => {
                     <div className="bg_fpage">
                         <div className="form_cont">
                             <form onSubmit={(e) => ValidateForm(e)} className="form-group d-flex has-feedback martop_for_ser_bar" id="image-form">
-                                <Input className="form-control  ps-4 me-4 " name="Search" type="file" onChange={(e) => setImage(e.target.files)} placeholder="search" accept="image/x-png,image/gif,image/jpeg,image/jpg,,image/png" />
+                                <Input className="form-control  ps-4 me-4 " name="upload" type="file" onChange={(e) => setImage(e.target.files)} placeholder="search" accept="image/x-png,image/gif,image/jpeg,image/jpg,,image/png" />
                                 <Button type="submit" outline color="primary" className="btn btn-outline-light" disabled={ImagesState.loading} >{ImagesState.loading === true ? "Uploading..." : "UPLOAD"}</Button>
                             </form>
                             <span className="text-white" hidden={ImagesState.loading===false ? !ImagesState.loading : !ImagesState.loading}> Uploading...</span>
